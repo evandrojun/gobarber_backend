@@ -1,5 +1,6 @@
 import 'reflect-metadata';
 
+import cors from 'cors';
 import express from 'express';
 import 'express-async-errors';
 
@@ -15,6 +16,7 @@ import exceptionHandler from './middlewares/exception_handler.middleware';
 
 const app = express();
 
+app.use(cors());
 app.use(express.json());
 app.use(logRequests);
 
